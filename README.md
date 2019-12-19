@@ -5,3 +5,4 @@
 
 ### notebook_firestore_read_write
 - GCP firestore内にあるデータを読み込み書き込み
+- firestoreのサブコレクションのデータの取得

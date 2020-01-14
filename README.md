@@ -10,3 +10,6 @@
 - GCP firestore内にあるデータを読み込み書き込み
 - firestoreのサブコレクションのデータの取得
 
+### notebook_nuance_recognition
+- Nuance VocalPasswordサーバへの声紋認証
+

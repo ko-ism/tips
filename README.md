@@ -13,3 +13,7 @@
 ### notebook_nuance_recognition
 - Nuance VocalPasswordサーバへの声紋認証
 
+### notebook_empath_python
+- make_audio_for_empathで、音声ファイル作成
+- empath_testで対象音声ファイルをempath API V2にリクエスト
+

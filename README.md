@@ -18,6 +18,6 @@
 - empath_testで対象音声ファイルをempath API V2にリクエスト
 
 
-### tools
+### tool_python
 - 各種ライブラリを使ってみる
   - contextlib

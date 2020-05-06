@@ -17,12 +17,14 @@
 - make_audio_for_empathで、音声ファイル作成
 - empath_testで対象音声ファイルをempath API V2にリクエスト
 
-
 ### tool_python
 - 各種ライブラリを使ってみる
   - contextlib (contextlib_test.py / contextlib_test2.py)
     - 特定処理の前後処理を簡単に定義できる
     - デコレータで呼ぶこともできるし、with句で呼ぶこともできる。
+    
   - contextlib.ContextDecorator (contextdec_test.py)
     - クラスで前後処理 ```__enter__```、```__exit__```で定義することで、上記処理を分かりやすく書ける
-  - 
+    
+  - contextlib.suppress (contextsup_test.py)
+  - contextlib.ExitStack (contextexit_test.py)

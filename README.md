@@ -18,32 +18,32 @@
 - empath_testで対象音声ファイルをempath API V2にリクエスト
 
 ### tool_python
-- 各種ライブラリを使ってみる
-  - contextlib (contextlib_test.py / contextlib_test2.py)
-    - 特定処理の前後処理を簡単に定義できる
-    - デコレータで呼ぶこともできるし、with句で呼ぶこともできる。
+各種ライブラリを使ってみる
+- contextlib (contextlib_test.py / contextlib_test2.py)
+  - 特定処理の前後処理を簡単に定義できる
+  - デコレータで呼ぶこともできるし、with句で呼ぶこともできる。
+  
+- contextlib.ContextDecorator (contextdec_test.py)
+  - クラスで前後処理 ```__enter__```、```__exit__```で定義することで、上記処理を分かりやすく書ける
     
-  - contextlib.ContextDecorator (contextdec_test.py)
-    - クラスで前後処理 ```__enter__```、```__exit__```で定義することで、上記処理を分かりやすく書ける
-    
-  - contextlib.suppress (contextsup_test.py)
-  - contextlib.ExitStack (contextexit_test.py)
-    - callback処理で関数の最後に実行する処理を設定できる
-    - 関数の最後に実行する内容が分かりやすいため大規模ＰＪ等だと使うことが多い
-  - io.BytesIO / ZipFile / requests
-    - 外部URLにリクエストしてzipをダウンロード。ローカルに保存せず、インメモリで解凍および、結果取得する
-  - collections.ChainMap
-    - 複雑なdict処理を行う際は使われる
-  - collections.defaultdict
-    - カウンターとしても使えるし、集合としても使うことができる
-  - collections.Counter
-    - カウンターとしての利用に特化。簡単にカウンター利用できる。
-    - カウントの最大のものや、トップ〇番とかを簡単に抽出できる
-  - queue.Queue,LifoQueue / collections.deque
-    - queue.Queue [1,2,3]と入れたら、1から取得
-    - queue.LifoQueue [1,2,3]と入れたら、3から取得
-      - Queue/LifoQueueはマルチスレッド環境のメソッドがあるので、そういうときに使う
-    - collections.deque は、Listのappendなどに比べてメモリ効率が良く、高速に処理されると言われている
+- contextlib.suppress (contextsup_test.py)
+- contextlib.ExitStack (contextexit_test.py)
+  - callback処理で関数の最後に実行する処理を設定できる
+  - 関数の最後に実行する内容が分かりやすいため大規模ＰＪ等だと使うことが多い
+- io.BytesIO / ZipFile / requests
+  - 外部URLにリクエストしてzipをダウンロード。ローカルに保存せず、インメモリで解凍および、結果取得する
+- collections.ChainMap
+  - 複雑なdict処理を行う際は使われる
+- collections.defaultdict
+  - カウンターとしても使えるし、集合としても使うことができる
+- collections.Counter
+  - カウンターとしての利用に特化。簡単にカウンター利用できる。
+  - カウントの最大のものや、トップ〇番とかを簡単に抽出できる
+- queue.Queue,LifoQueue / collections.deque
+  - queue.Queue [1,2,3]と入れたら、1から取得
+  - queue.LifoQueue [1,2,3]と入れたら、3から取得
+    - Queue/LifoQueueはマルチスレッド環境のメソッドがあるので、そういうときに使う
+  - collections.deque は、Listのappendなどに比べてメモリ効率が良く、高速に処理されると言われている
 ```
 for _ in range(3):
     ## FIFO
@@ -79,9 +79,9 @@ FIFO queue = 0
 FIFO queue = 0
 ```
 
-  - collections.namedtuple
-    - csvデータとかを入力したときに値を取り出しやすくなる
-  - collections.OrderedDict
-    - 順番を守られた形で辞書を使いたいのであれば、これを使う。
-    - データを追加すると必ず最後に入る
-      - ソートをしたいなら、データをつかした後にソートを再度実行
+- collections.namedtuple
+  - csvデータとかを入力したときに値を取り出しやすくなる
+- collections.OrderedDict
+  - 順番を守られた形で辞書を使いたいのであれば、これを使う。
+  - データを追加すると必ず最後に入る
+    - ソートをしたいなら、データをつかした後にソートを再度実行

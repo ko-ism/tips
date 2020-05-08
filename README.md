@@ -32,5 +32,15 @@
     - 関数の最後に実行する内容が分かりやすいため大規模ＰＪ等だと使うことが多い
   - io.BytesIO / ZipFile / requests
     - 外部URLにリクエストしてzipをダウンロード。ローカルに保存せず、インメモリで解凍および、結果取得する
-  - collections
-    -  
+  - collections.ChainMap
+    - 複雑なdict処理を行う際は使われる
+  - collections.defaultdict
+    - カウンターとしても使えるし、集合としても使うことができる
+  - collections.Counter
+    - カウンターとしての利用に特化。簡単にカウンター利用できる。
+    - カウントの最大のものや、トップ〇番とかを簡単に抽出できる
+  - queue.Queue,LifoQueue / collections.deque
+    - queue.Queue [1,2,3]と入れたら、1から取得
+    - queue.LifoQueue [1,2,3]と入れたら、3から取得
+      - Queue/LifoQueueはマルチスレッド環境のメソッドがあるので、そういうときに使う
+    - collections.deque は、Listのappendなどに比べてメモリ効率が良く、高速に処理されると言われている

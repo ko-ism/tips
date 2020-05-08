@@ -44,3 +44,38 @@
     - queue.LifoQueue [1,2,3]と入れたら、3から取得
       - Queue/LifoQueueはマルチスレッド環境のメソッドがあるので、そういうときに使う
     - collections.deque は、Listのappendなどに比べてメモリ効率が良く、高速に処理されると言われている
+```
+for _ in range(3):
+    ## FIFO
+    print(f'FIFO queue = {q.get()}')
+    ## LIFO
+    print(f'FIFO queue = {lq.get()}')
+    ## LIFO
+    print(f'FIFO queue = {l.pop()}')
+    ## FIFO
+    # print(f'FIFO queue = {l.pop(0)}')
+    ## LIFO
+    print(f'FIFO queue = {d.pop()}')
+    ## FIFO
+    # print(f'FIFO queue = {d.popleft()}')
+    print('')
+```
+
+```
+.\tool_python\collections_deque_test.py
+FIFO queue = 0
+FIFO queue = 2
+FIFO queue = 2
+FIFO queue = 2
+
+FIFO queue = 1
+FIFO queue = 1
+FIFO queue = 1
+FIFO queue = 1
+
+FIFO queue = 2
+FIFO queue = 0
+FIFO queue = 0
+FIFO queue = 0
+```
+

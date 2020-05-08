@@ -28,3 +28,5 @@
     
   - contextlib.suppress (contextsup_test.py)
   - contextlib.ExitStack (contextexit_test.py)
+    - callback処理で関数の最後に実行する処理を設定できる
+    - 関数の最後に実行する内容が分かりやすいため大規模ＰＪ等だと使うことが多い

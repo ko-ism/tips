@@ -79,3 +79,9 @@ FIFO queue = 0
 FIFO queue = 0
 ```
 
+  - collections.namedtuple
+    - csvデータとかを入力したときに値を取り出しやすくなる
+  - collections.OrderedDict
+    - 順番を守られた形で辞書を使いたいのであれば、これを使う。
+    - データを追加すると必ず最後に入る
+      - ソートをしたいなら、データをつかした後にソートを再度実行

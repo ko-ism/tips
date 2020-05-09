@@ -112,3 +112,14 @@ RE_STACK_ID = re.compile(r"""
     (?P<stackname>[\w-]+)/
     [\w-]+""", re.VERBOSE)
 ```
+
+  - re.subを使って、関数と組み合わせることもできる
+```
+def hexrpl(match):
+    value = int(match.group())
+    return hex(value)
+
+p = re.compile(r'\d')
+print(p.sub(hexrpl, '12345 55 11 test test2'))
+# print(re.sub(p, hexrpl, '12345 55 11 test test2'))
+```

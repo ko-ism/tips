@@ -85,7 +85,7 @@ FIFO queue = 0
   - 順番を守られた形で辞書を使いたいのであれば、これを使う。
   - データを追加すると必ず最後に入る
     - ソートをしたいなら、データをつかした後にソートを再度実行
-- re
+- re (re_test.py / re_test2.py / re_test3.py)
   - match() 
     - 字列の先頭で正規表現とマッチするか判定
   - search()
@@ -94,3 +94,21 @@ FIFO queue = 0
     - 正規表現にマッチする部分文字列をすべて洗い出しリストとして返す
   - finditer()
     - 重複しないマッチオブジェクトのイテレータを返す
+  - compile()
+    - 正規表現ルールをコンパイルして高速処理。一度でなく複数回同じルールを処理するなら活用すべき。
+  - 正規表現内でのグループ名の付け方、これをつけておくと、後で使うときに分かりやすい
+    - ```(?<group名>)```　group名をregionとするなら以下のような形で取得できる
+    - ```print(m.group('region'))``` 等、
+    
+```
+s = ('arn:aws:cloudformation:us-east-2:123456789012:stack/'
+    'lambda-error-processor/1134083a-2608-1e91-9897-022501a2c456')
+
+RE_STACK_ID = re.compile(r"""
+    arn:aws:cloudformation:
+    (?P<region>[\w-]+):
+    (?P<account>[\d]+)
+    :stack/
+    (?P<stackname>[\w-]+)/
+    [\w-]+""", re.VERBOSE)
+```

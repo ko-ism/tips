@@ -133,20 +133,22 @@ print(re.match('<.*?>', s))
 ```
 
   - format
-    - tupleとか
+    - tuple、辞書のキーワード渡し、コメント入れる際とか、重宝
 ```
+# タプル
 t = (1, 2, 3)
 print('{t[0]} {t[2]}'.format(t=t))
+print('{0} {2}'.format(*t))
 ```
 
-  - 辞書とか
-
 ```
+# 辞書
 d = {'name' : 'shinya', 'family': 'koizumi'}
 print('{name} {family}'.format(**d))
 ```
-  - コメント入れるものとか
+
 ```
+# コメント入れる
 print('{name:{fill}{align}{width}}'.format(name = 'test', fill = '*', align = '^', width = 30))
 # 出力
 # *************test*************

@@ -168,3 +168,27 @@ print('{0:d} {0:#x} {0:#o} {0:#b}'.format(100))
 print('{0:d} {0:x} {0:o} {0:b}'.format(100))
 # result is 100 64 144 1100100
 ```
+
+- repr関数とstr関数
+
+```
+# classの__str__関数をオーバーライドして、管理情報を表示させたり
+# するのはよくやるアプリケーション開発の手法
+class Point(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __repr__(self):
+        return 'Point<object>'
+
+    def __str__(self):
+        return 'Point ({}, {})'.format(self.x, self.y)
+    
+p = Point(10,100)
+print('{0!r}'.format(p))
+print('{0}'.format(p))
+print('{0!s}'.format(p))
+```
+
+

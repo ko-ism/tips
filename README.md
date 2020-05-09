@@ -134,6 +134,7 @@ print(re.match('<.*?>', s))
 
   - format
     - tuple、辞書のキーワード渡し、コメント入れる際とか、重宝
+    - 10,16進数,8進数,2進数など、簡単に表示できる
 ```
 # タプル
 t = (1, 2, 3)
@@ -152,4 +153,18 @@ print('{name} {family}'.format(**d))
 print('{name:{fill}{align}{width}}'.format(name = 'test', fill = '*', align = '^', width = 30))
 # 出力
 # *************test*************
+```
+
+```
+# 10,16進数,8進数,2進数など、簡単に表示できる
+print('{0:d} {1:d} {2:d}'.format(100,200,300))
+# result is 100 200 300
+print('{:d} {:d} {:d}'.format(100,200,300))
+# result is 100 200 300
+print(int(100), hex(100), oct(100), bin(100))
+# result is 100 0x64 0o144 0b1100100
+print('{0:d} {0:#x} {0:#o} {0:#b}'.format(100))
+# result is 100 0x64 0o144 0b1100100
+print('{0:d} {0:x} {0:o} {0:b}'.format(100))
+# result is 100 64 144 1100100
 ```

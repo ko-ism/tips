@@ -145,7 +145,7 @@ print('{name} {family}'.format(**d))
 ```
     - コメント入れるものとか
 ```
-print('{name:{fill}{align}{width}}'.format(name = 'test', fill = '*', align = '^', width = 50))
+print('{name:{fill}{align}{width}}'.format(name = 'test', fill = '*', align = '^', width = 30))
 # 出力
-# ***********************test***********************
+# *************test*************
 ```

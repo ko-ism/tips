@@ -40,5 +40,5 @@ finditer()  重複しないマッチオブジェクトのイテレータを返�
 # print(m)
 
 # m = re.search('^abc', 'abc test abc')
-# m = re.search('abc$', 'abc test abc')
-# print(m)
+m = re.search('abc$', 'abc test abc')
+print(m)

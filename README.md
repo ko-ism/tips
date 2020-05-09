@@ -189,6 +189,12 @@ p = Point(10,100)
 print('{0!r}'.format(p))
 print('{0}'.format(p))
 print('{0!s}'.format(p))
+
+# 出力
+# Point<object>
+# Point (10, 100)
+# Point (10, 100)
+
 ```
 
 

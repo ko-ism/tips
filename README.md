@@ -131,3 +131,21 @@ s = '<html><head><title>Title</title></head></html>'
 print(re.match('<.*>', s))
 print(re.match('<.*?>', s))
 ```
+
+  - format
+    - tupleとか
+```
+t = (1, 2, 3)
+print('{t[0]} {t[2]}'.format(t=t))
+```
+    - 辞書とか
+```
+d = {'name' : 'shinya', 'family': 'koizumi'}
+print('{name} {family}'.format(**d))
+```
+    - コメント入れるものとか
+```
+print('{name:{fill}{align}{width}}'.format(name = 'test', fill = '*', align = '^', width = 50))
+# 出力
+# ***********************test***********************
+```

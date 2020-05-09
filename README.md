@@ -138,12 +138,14 @@ print(re.match('<.*?>', s))
 t = (1, 2, 3)
 print('{t[0]} {t[2]}'.format(t=t))
 ```
-    - 辞書とか
+
+  - 辞書とか
+
 ```
 d = {'name' : 'shinya', 'family': 'koizumi'}
 print('{name} {family}'.format(**d))
 ```
-    - コメント入れるものとか
+  - コメント入れるものとか
 ```
 print('{name:{fill}{align}{width}}'.format(name = 'test', fill = '*', align = '^', width = 30))
 # 出力

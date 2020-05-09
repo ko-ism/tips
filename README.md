@@ -123,3 +123,11 @@ p = re.compile(r'\d')
 print(p.sub(hexrpl, '12345 55 11 test test2'))
 # print(re.sub(p, hexrpl, '12345 55 11 test test2'))
 ```
+  - 正規表現でのgreedy
+    - ?を使って、Greedyなmatchを防ぐこともtips
+```
+s = '<html><head><title>Title</title></head></html>'
+
+print(re.match('<.*>', s))
+print(re.match('<.*?>', s))
+```

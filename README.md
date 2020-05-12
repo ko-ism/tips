@@ -209,3 +209,5 @@ sphinx-build ./docs ./docs/_build
 # １ページに全データをまとめたければ
 sphinx-build -b singlehtml ./docs ./docs/_build
 ```
+
+- urllib.request / requests / socket

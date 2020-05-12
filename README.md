@@ -197,4 +197,15 @@ print('{0!s}'.format(p))
 
 ```
 
+- sphinxで、ドキュメント自動生成(docstring Google形式)
+  - [公式](https://www.sphinx-doc.org/ja/stable/contents.html)
+  - [Sphinxの使い方．docstringを読み込んで仕様書を生成](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)
 
+```
+sphinx-apidoc -f -o ./docs .
+
+# 通常
+sphinx-build ./docs ./docs/_build
+# １ページに全データをまとめたければ
+sphinx-build -b singlehtml ./docs ./docs/_build
+```

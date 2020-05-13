@@ -211,3 +211,5 @@ sphinx-build -b singlehtml ./docs ./docs/_build
 ```
 
 - urllib.request / requests / socket
+- flask GET/POST/PUT/DELETE
+- BeautifulSoup

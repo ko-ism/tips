@@ -215,3 +215,7 @@ sphinx-build -b singlehtml ./docs ./docs/_build
 - BeautifulSoup
 - NetworkX (networkx_test.py)
   - https://networkx.github.io/documentation/stable/index.html
+
+
+- 非同期処理 (asyncio)
+  - async / await を使って、非同期処理ができる(Python3.6以降

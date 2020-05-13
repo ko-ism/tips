@@ -213,3 +213,5 @@ sphinx-build -b singlehtml ./docs ./docs/_build
 - urllib.request / requests / socket
 - flask GET/POST/PUT/DELETE
 - BeautifulSoup
+- NetworkX (networkx_test.py)
+  - https://networkx.github.io/documentation/stable/index.html

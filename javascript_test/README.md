@@ -57,3 +57,16 @@ let str = 'Tom'
 str = addAs(str);
 console.log(str); // TomAAAAA
 ```
+
+### スプレッド構文
+- 配列をそのまま渡せる
+```
+function sum(x, y, z){
+    return x + y + z;
+}
+
+console.log(sum(1, 2, 3)); // 6
+
+const numbers = [1, 2, 3];
+console.log(sum(...numbers)); // 6
+```

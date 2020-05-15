@@ -195,7 +195,11 @@ console.log(data);
 console.log(newData);
 ```
 
-- map/filter/reduce/sortなど高階関数を使うと、メソッドチェーンをして、処理を繋げることができ、便利。何をしたいかが端的でわかりやすくなる効果もある。
+- map/filter/reduce/sortなど高階関数を使うと、メソッドチェーンをして、処理を繋げることができ、便利。
+  - mapなら新しい配列を作りたいのだということが分かるし、filterも特定条件に絞りたいこともわかる
+    - 要は、何をしたいかが、その処理内容含め、端的でわかりやすくなる効果もある。
+    - forやforEachは、なんでもできるがゆえに、同じ処理なら理解に少し時間を要することが多い
+    - forEach使う前に、map/filter/reduce/sortなどでできないかを考えること
   - 関数を引数、戻り値として扱う関数
   - [JavaScript で forEach を使うのは最終手段](https://qiita.com/diescake/items/70d9b0cbd4e3d5cc6fce)
   

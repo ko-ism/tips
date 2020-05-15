@@ -14,6 +14,7 @@
       counter: function(){
           console.log(this);
           setTimeout(() => {
+              // この場合のthisは、normalFn objを指す
               console.log(this);
           }, 1000)
       }
@@ -21,3 +22,18 @@
   normalFn.counter();
 ```
 
+
+```
+  let normalFn;
+  normalFn = {
+      id: 43,
+      counter: function(){
+          console.log(this);
+          setTimeout( function() {
+              // この場合のthisは、window obj
+              console.log(this);
+          }, 1000)
+      }
+  }
+  normalFn.counter();
+```

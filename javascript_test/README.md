@@ -30,10 +30,30 @@
       counter: function(){
           console.log(this);
           setTimeout( function() {
-              // この場合のthisは、window obj
+              // この場合のthisは、window objを指す
               console.log(this);
           }, 1000)
       }
   }
   normalFn.counter();
+```
+
+### クロージャ関数
+- クロージャは、関数とその関数が宣言されたレキシカルスコープの組み合わせ
+- 柔軟に関数を定義することができる
+- private変数を使うときはクロージャ関数を使うと良い
+
+```
+function addStringFactory(tail){
+    return function concat(str){
+        return str + tail;
+    }
+}
+
+let addAs = addStringFactory('AAAAA');
+let addBs = addStringFactory('BBBBB');
+
+let str = 'Tom'
+str = addAs(str);
+console.log(str); // TomAAAAA
 ```

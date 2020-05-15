@@ -293,5 +293,42 @@ Promise.race([wait2(100), wait2(1500), wait2(2000)]).then((nums) => {
 });
 ```
 
+#### await-async 
+- よりすっきり書ける
+- ErrorHandlingはtry catchにて実施。
 
-#### 
+```
+// await-async
+function wait3(num){
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            console.log(num);
+            if (num ==2){
+                reject(num);
+            }else{
+                resolve(num);
+            }
+        }, num);
+    });
+}
+
+async function init(){
+    let num = 0;
+    try {
+        num = await wait3(num);
+        num++;
+        num = await wait3(num);
+        num++;
+        // num = await wait3(num);
+        // num++;
+    }catch(e){
+        throw new Error('Error is occured', e);
+    }
+
+    return num
+}
+
+init().then(() => {
+    console.log('End');
+});
+```

@@ -147,3 +147,18 @@ drawES2015Chart({
 - ダブルクォートやシングルクォート（""や''）ではなく、``` `` ```で括ると変数を組み込める
 
 ### ループ
+- 一般的なループ記法
+```
+for(let i = 0; i < keyFruits.length; i++){
+    console.log(i, fruits[keyFruits[i]]);
+}
+```
+- for inの記法もできるが、hasOwnPropertyを利用しないと、必要のないプロパティもループ処理されてしまう
+```
+for(let i in fruits){
+    if(fruits.hasOwnProperty(i)){
+        console.log(i, fruits[i]);
+    }
+}
+```
+- 

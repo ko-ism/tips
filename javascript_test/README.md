@@ -69,4 +69,7 @@ console.log(sum(1, 2, 3)); // 6
 
 const numbers = [1, 2, 3];
 console.log(sum(...numbers)); // 6
+
+// 一昔前は、applyを使って書いていた
+console.log(sum.apply(null, numbers)); // 6
 ```

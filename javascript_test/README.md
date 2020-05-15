@@ -73,3 +73,16 @@ console.log(sum(...numbers)); // 6
 // 一昔前は、applyを使って書いていた
 console.log(sum.apply(null, numbers)); // 6
 ```
+
+- メリット①簡単に、配列結合ができる、追加も。
+```
+let arr1 = [0, 1, 2];
+let arr2 = [3, 4, 5];
+arr3 = arr1.concat(arr2);
+// 配列の結合もconcatせずにできる
+arr4 = [...arr1, ...arr2];
+// 配列の結合時、追加も簡単にできる
+arr5 = [...arr1, 10, ...arr2];
+console.log(arr5);
+```
+

@@ -178,3 +178,58 @@ for(let [k, v] of keyFruits){
     console.log(k, v);
 }
 ```
+
+- forEach / mapで繰り返し処理
+  - mapであれば、値を加工する際に使う
+  - callback
+```
+const data = [1, 4, 2, 5];
+// data.forEach((value, index, array) => {
+//     console.log(value, index, array);
+// });
+
+const newData = data.map((value, index, array) => {
+    return value * 2;
+});
+console.log(data);
+console.log(newData);
+```
+
+- map/filter/reduce/sortなど高階関数を使うと、メソッドチェーンをして、処理を繋げることができ、便利。何をしたいかが端的でわかりやすくなる効果もある。
+  - 関数を引数、戻り値として扱う関数
+  - [JavaScript で forEach を使うのは最終手段](https://qiita.com/diescake/items/70d9b0cbd4e3d5cc6fce)
+  
+```
+// map
+const newData = data.map((value, index, array) => {
+    return value * 2;
+});
+console.log(data); //Array(4) [1, 4, 2, 5]
+console.log(newData); //Array(4) [2, 8, 4, 10]
+
+// filter は、条件にマッチしたデータだけ、戻す。
+const newData = data.filter((value, index, array) => {
+    return value == 1;
+});
+console.log(data); // Array(4) [1, 4, 2, 5]
+console.log(newData); // Array(1) [1]
+
+
+// reduceは、returnの値をaccuに戻す場合に使う。
+// 文字列を結合するときとかに使う。それ以外に使い様。
+const newData = data.reduce((accu, curr) => {
+    console.log(accu, curr);
+    return accu + curr;
+});
+console.log(data); // Array(4) [1, 4, 2, 5]
+console.log(newData); // 12
+
+// ソートする。元の配列の順序も変わることに注意。
+const newData = data.sort((a, b) => {
+    console.log(a, b);
+    return a - b;// 昇順
+    // return b - a;// 降順
+});
+console.log(data); // Array(4) [1, 4, 2, 5]
+console.log(newData); // Array(1) [1]
+```

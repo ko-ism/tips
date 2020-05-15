@@ -237,3 +237,14 @@ const newData = data.sort((a, b) => {
 console.log(data); // Array(4) [1, 4, 2, 5]
 console.log(newData); // Array(1) [1]
 ```
+
+
+```
+const newData = data
+.map(v => v+1)
+.sort((a, b) => {
+    return a - b;
+});
+console.log(data); // Array(4) [1, 2, 4, 5]
+console.log(newData); // Array(4) [2, 3, 5, 6]
+```

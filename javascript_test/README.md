@@ -158,10 +158,23 @@ for(let i = 0; i < keyFruits.length; i++){
 ```
 - for inの記法もできるが、hasOwnPropertyを利用しないと、必要のないプロパティもループ処理されてしまう
 ```
+const fruits = {banana: 'バナナ', apple: 'リンゴ', orange: 'オレンジ'}
 for(let i in fruits){
     if(fruits.hasOwnProperty(i)){
         console.log(i, fruits[i]);
     }
 }
 ```
-- 
+- for ofにより、valueを取ってくることができる
+- Object.keys(<オブジェクト>)により、キーを格納することができる
+- Object.values(<オブジェクト>)により、バリューを格納することができる
+- ES8から、Object.entries(<オブジェクト>)で、キーバリューの配列を取得することができる
+  - entriesを使ったfor ofでのループは今後使われることになる
+  
+```
+const fruits = {banana: 'バナナ', apple: 'リンゴ', orange: 'オレンジ'}
+let keyFruits = Object.entries(fruits);
+for(let [k, v] of keyFruits){
+    console.log(k, v);
+}
+```

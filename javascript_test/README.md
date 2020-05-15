@@ -1,5 +1,8 @@
 # tips
 ## 基礎
+- Udemy講座：JavaScriptの動作を論理的に解説！JavaScript中級者への道　
+- https://nttcsol.udemy.com/course/road-to-javascript-master/learn/lecture/16596662
+
 ### this (basic_test/this_test.js)
 - thisを呼び出す際の、呼び出す場所によってwindowオブジェクトか、自身のオブジェクトを指すかが分かれる
 

@@ -95,3 +95,20 @@ let mergedObj = { ...obj1, ...obj2 };
 console.log(clonedObj); // Object {foo: "bar", x: 42}
 console.log(mergedObj); // Object {foo: "baz", x: 42, y: 13}
 ```
+
+- Rest Parametersとしての利用
+```
+// Rest Parameters
+function sum(...theArgs){
+    return theArgs.reduce((previous, current) => {
+        return previous + current;
+    })
+}
+console.log(sum(1,2,3)); // 6
+
+function f(a, ...args){
+    console.log(args);
+}
+
+f(1, 2, 3); // Array(2) [2, 3]
+```

@@ -24,10 +24,34 @@
 // console.log(arr5);
 
 
-// 辞書での利用
-let obj1 = { foo: 'bar', x:42};
-let obj2 = { foo: 'baz', y:13};
-let clonedObj = { ...obj1 };
-let mergedObj = { ...obj1, ...obj2 };
-console.log(clonedObj); // Object {foo: "bar", x: 42}
-console.log(mergedObj); // Object {foo: "baz", x: 42, y: 13}
+// // 辞書での利用
+// let obj1 = { foo: 'bar', x:42};
+// let obj2 = { foo: 'baz', y:13};
+// let clonedObj = { ...obj1 };
+// let mergedObj = { ...obj1, ...obj2 };
+// console.log(clonedObj); // Object {foo: "bar", x: 42}
+// console.log(mergedObj); // Object {foo: "baz", x: 42, y: 13}
+
+
+// // 参照のコピー
+// let a = [[1], [2], [3]];
+// let b = [...a];
+// // shift()は、最初の配列を削除する
+// console.log(b.shift().shift()); // 1
+// console.log(b); // Array(2) [Array(1), Array(1)]
+// console.log(a); // Array(3) [Array(0), Array(1), Array(1)]
+
+
+// Rest Parameters
+function sum(...theArgs){
+    return theArgs.reduce((previous, current) => {
+        return previous + current;
+    })
+}
+console.log(sum(1,2,3)); // 6
+
+function f(a, ...args){
+    console.log(args);
+}
+
+f(1, 2, 3); // Array(2) [2, 3]

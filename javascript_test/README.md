@@ -248,3 +248,5 @@ const newData = data
 console.log(data); // Array(4) [1, 2, 4, 5]
 console.log(newData); // Array(4) [2, 3, 5, 6]
 ```
+
+### 非同期処理

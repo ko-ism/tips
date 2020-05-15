@@ -86,3 +86,12 @@ arr5 = [...arr1, 10, ...arr2];
 console.log(arr5);
 ```
 
+- メリット②辞書も適用できる
+```
+let obj1 = { foo: 'bar', x:42};
+let obj2 = { foo: 'baz', y:13};
+let clonedObj = { ...obj1 };
+let mergedObj = { ...obj1, ...obj2 };
+console.log(clonedObj); // Object {foo: "bar", x: 42}
+console.log(mergedObj); // Object {foo: "baz", x: 42, y: 13}
+```

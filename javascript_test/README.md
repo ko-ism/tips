@@ -286,5 +286,12 @@ Promise.all([wait2(100), wait2(1500), wait2(2000)]).then((nums) => {
     console.log(nums);
 });
 
+// Promise.raceメソッドは、実行するどれか一つのPromise処理が終わったら実行される
+// けっかとして返ってくるnumsは、処理が終わった結果であり、以下だとnums==100となる。
+Promise.race([wait2(100), wait2(1500), wait2(2000)]).then((nums) => {
+    console.log(nums+1); // 101
+});
 ```
+
+
 #### 

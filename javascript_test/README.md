@@ -250,3 +250,41 @@ console.log(newData); // Array(4) [2, 3, 5, 6]
 ```
 
 ### 非同期処理
+#### callback
+- 見づらい
+#### Promise
+- thenメソッドでPromiseを繋げる場合は、return でPromiseを返す必要がある
+
+```
+// Promise
+function wait2(num){
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            console.log(num);
+            if (num ==1002){
+                reject(num);
+            }else{
+                resolve(num);
+            }
+        }, num);
+    });
+}
+
+wait2(1000).then((num) =>{
+    return wait2(num);
+}).then((num) =>{
+    return wait2(num);
+}).then((num) =>{
+    return wait2(num);
+})
+```
+
+```
+// Promise.allメソッドで、すべてのPromiseメソッドが終わった後に、実行される
+// 下記Promiseメソッド(wait2)は、非同期に並列で処理される
+Promise.all([wait2(100), wait2(1500), wait2(2000)]).then((nums) => {
+    console.log(nums);
+});
+
+```
+#### 

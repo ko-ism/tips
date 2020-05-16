@@ -364,3 +364,60 @@ let me2 = new Japanese('Japanese', 'Name');
 me2.introduce(); // My name is JapaneseName
 me2.say_japanese(); // こんにちは JapaneseName
 ```
+
+### クラス（よりすっきり
+- 上記の関数で作ったコンストラクタやプロトタイプメソッドを、Classで書き換えると、非常に可読性が上がるし、すっきりする
+
+```
+class Person {
+    constructor(first, last){
+        this.first = first;
+        this.last = last;
+    }
+    introduce(){
+        console.log('My name is ' + this.first + this.last);
+    };
+}
+
+class Japanese extends Person{
+    constructor(first, last){
+        super(first, last);
+        this.lang = 'ja';
+        this._age = 0;
+    }
+
+    sayJapanese(){
+        console.log('こんにちは ' + this.first + this.last);
+    };
+
+    static sayHello(value){
+        console.log('こんにちは ' + value);
+    }
+
+    set age(value){
+        this._age = value;
+    }
+
+    get age(){
+        return this._age;
+    }
+}
+
+let me = new Person('First', 'Last');
+me.introduce(); // My name is FirstLast
+
+// 継承
+let me2 = new Japanese('Japanese', 'Name');
+me2.introduce(); // My name is JapaneseName
+me2.sayJapanese(); // こんにちは JapaneseName
+
+// static呼び出し
+Japanese.sayHello("TEST"); // こんにちは TEST
+
+// get/set
+console.log(me2.age); // 0
+me2.age = 10;
+console.log(me2.age); // 10
+```
+
+- https://github.com/codemafia0000/es2019-class-tuts

@@ -357,6 +357,10 @@ function Japanese(first, last){
     this.lang = 'ja'
 }
 Object.setPrototypeOf(Japanese.prototype, Person.prototype);
+Japanese.prototype.say_japanese = function(){
+    console.log('こんにちは ' + this.first + this.last);
+};
 let me2 = new Japanese('Japanese', 'Name');
 me2.introduce(); // My name is JapaneseName
+me2.say_japanese(); // こんにちは JapaneseName
 ```

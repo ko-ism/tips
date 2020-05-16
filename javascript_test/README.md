@@ -332,3 +332,31 @@ init().then(() => {
     console.log('End');
 });
 ```
+
+### プロトタイプチェーン、継承
+- コンストラクタを作って、プロトタイプでメソッド追加。継承も可能。
+
+```
+function Person(first, last){
+    this.first = first;
+    this.last = last;
+};
+
+let me = new Person('First', 'Last');
+// プロトタイプを利用してコンストラクタ定義をすることが多い
+Person.prototype.introduce = function(){
+    console.log('My name is ' + this.first + this.last);
+};
+me.introduce(); // My name is FirstLast
+
+
+// 継承
+function Japanese(first, last){
+    // Personをcallしてbindする
+    Person.call(this, first, last);
+    this.lang = 'ja'
+}
+Object.setPrototypeOf(Japanese.prototype, Person.prototype);
+let me2 = new Japanese('Japanese', 'Name');
+me2.introduce(); // My name is JapaneseName
+```

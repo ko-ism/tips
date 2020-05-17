@@ -18,4 +18,7 @@
 - empath_testで対象音声ファイルをempath API V2にリクエスト
 
 ### tool_python
-各種ライブラリを使ってみる
+- 各種ライブラリを使ってみる
+
+### datascience_bootcamp
+- データサイエンス25時間ブートキャンプ

@@ -20,5 +20,5 @@
 ### tool_python
 - 各種ライブラリを使ってみる
 
-### datascience_bootcamp
-- データサイエンス25時間ブートキャンプ
+### selenium_test
+- seleniumのライブラリを使ったテスト

@@ -4,3 +4,6 @@
 
 ## javascript_test
 - Javascriptでの動作確認色々
+
+## go_test
+- Goでの動作確認色々

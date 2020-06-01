@@ -1,0 +1,12 @@
+2020/06/01 14:40:31 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:21: Exit open fdafdsafa: The system cannot find the file specified.
+2020/06/01 14:40:59 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:21: Exit open fdafdsafa: The system cannot find the file specified.
+2020/06/01 14:41:32 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:21: Exit open fdafdsafa: The system cannot find the file specified.
+2020/06/01 14:42:09 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:23: logging!
+2020/06/01 14:42:09 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:24: string test
+2020/06/01 14:42:09 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:26: string test
+2020/06/01 14:42:35 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:23: logging!
+2020/06/01 14:42:35 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:24: string test
+2020/06/01 14:42:35 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:26: string test
+2020/06/01 14:48:15 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:23: logging!
+2020/06/01 14:48:15 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:24: string test
+2020/06/01 14:48:15 c:/Users/shink/Desktop/GCPprotos/tips/go_test/basic_udemy/statement/log/main.go:27: error!!

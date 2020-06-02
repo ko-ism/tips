@@ -8,6 +8,10 @@ func one(x *int) {
 
 func main() {
 	var n int = 100
+	fmt.Println(n)   // 100
+	fmt.Println(&n)  // 0xc0000140a8
+	fmt.Println(*&n) // 100
+
 	one(&n)
 	fmt.Println(n)
 

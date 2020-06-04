@@ -199,3 +199,7 @@ sphinx-build -b singlehtml ./docs ./docs/_build
 
 - 非同期処理 (asyncio)
   - async / await を使って、非同期処理ができる(Python3.6以降
+  
+
+## thread
+- https://hackmd.io/pmHc03EORqmorf7vVaAaPA

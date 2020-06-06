@@ -12,3 +12,6 @@
 
 ## セクション7:Goroutine
 - goroutine
+
+## セクション8:パッケージ
+- package

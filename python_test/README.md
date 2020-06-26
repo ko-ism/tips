@@ -22,3 +22,5 @@
 
 ### selenium_test
 - seleniumのライブラリを使ったテスト
+  - Qiita
+  - Udemy
